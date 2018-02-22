@@ -1,0 +1,6 @@
+framework module Pods_FooBarQixTests {
+  umbrella header "Pods-FooBarQixTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
