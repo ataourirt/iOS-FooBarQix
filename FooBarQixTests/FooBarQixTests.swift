@@ -20,8 +20,8 @@ class FooBarQixSpec: QuickSpec {
       
       it("must not return values when the numbers aren't divisible per 3, 5 or 7") {
         let numbers = [1, 8]
-        let firstResult = FooBarQix.divisibleValue(for: numbers[0])
-        let secondResult = FooBarQix.divisibleValue(for: numbers[1])
+        let firstResult = FooBarQix.divisibleKeyword(for: numbers[0])
+        let secondResult = FooBarQix.divisibleKeyword(for: numbers[1])
         expect(firstResult).to(beEmpty())
         expect(secondResult).to(beEmpty())
       }
@@ -30,24 +30,24 @@ class FooBarQixSpec: QuickSpec {
         
         it("must be return 'Foo' when the number is divisible per 3") {
           let numbers = [3, 6]
-          let firstResult = FooBarQix.divisibleValue(for: numbers[0])
-          let secondResult = FooBarQix.divisibleValue(for: numbers[1])
+          let firstResult = FooBarQix.divisibleKeyword(for: numbers[0])
+          let secondResult = FooBarQix.divisibleKeyword(for: numbers[1])
           expect(firstResult).to(match("Foo"))
           expect(secondResult).to(match("Foo"))
         }
         
         it("must be return 'Bar' when the number is divisible per 5") {
           let numbers = [5, 10]
-          let firstResult = FooBarQix.divisibleValue(for: numbers[0])
-          let secondResult = FooBarQix.divisibleValue(for: numbers[1])
+          let firstResult = FooBarQix.divisibleKeyword(for: numbers[0])
+          let secondResult = FooBarQix.divisibleKeyword(for: numbers[1])
           expect(firstResult).to(match("Bar"))
           expect(secondResult).to(match("Bar"))
         }
         
         it("must be return 'Qix' when the number is divisible per 7") {
           let numbers = [7, 14]
-          let firstResult = FooBarQix.divisibleValue(for: numbers[0])
-          let secondResult = FooBarQix.divisibleValue(for: numbers[1])
+          let firstResult = FooBarQix.divisibleKeyword(for: numbers[0])
+          let secondResult = FooBarQix.divisibleKeyword(for: numbers[1])
           expect(firstResult).to(match("Qix"))
           expect(secondResult).to(match("Qix"))
         }
@@ -61,48 +61,48 @@ class FooBarQixSpec: QuickSpec {
         
         it("must be return 'Foo' when the number contain 3") {
           let numbers = [3, 13]
-          let firstResult = FooBarQix.containingValue(for: numbers[0])
-          let secondResult = FooBarQix.containingValue(for: numbers[1])
+          let firstResult = FooBarQix.containingKeyword(for: numbers[0])
+          let secondResult = FooBarQix.containingKeyword(for: numbers[1])
           expect(firstResult).to(match("Foo"))
           expect(secondResult).to(match("Foo"))
         }
         
         it("must be return 'Bar' when the number contain 5") {
           let numbers = [5, 15]
-          let firstResult = FooBarQix.containingValue(for: numbers[0])
-          let secondResult = FooBarQix.containingValue(for: numbers[1])
+          let firstResult = FooBarQix.containingKeyword(for: numbers[0])
+          let secondResult = FooBarQix.containingKeyword(for: numbers[1])
           expect(firstResult).to(match("Bar"))
           expect(secondResult).to(match("Bar"))
         }
         
         it("must be return 'Qix' when the number contain 7") {
           let numbers = [7, 17]
-          let firstResult = FooBarQix.containingValue(for: numbers[0])
-          let secondResult = FooBarQix.containingValue(for: numbers[1])
+          let firstResult = FooBarQix.containingKeyword(for: numbers[0])
+          let secondResult = FooBarQix.containingKeyword(for: numbers[1])
           expect(firstResult).to(match("Qix"))
           expect(secondResult).to(match("Qix"))
         }
         
         it("must be return n*'Foo' when the numbers contain n*3") {
           let numbers = [33, 333]
-          let firstResult = FooBarQix.containingValue(for: numbers[0])
-          let secondResult = FooBarQix.containingValue(for: numbers[1])
+          let firstResult = FooBarQix.containingKeyword(for: numbers[0])
+          let secondResult = FooBarQix.containingKeyword(for: numbers[1])
           expect(firstResult).to(match("FooFoo"))
           expect(secondResult).to(match("FooFooFoo"))
         }
         
         it("must be return n*'Bar' when the numbers contain n*5") {
           let numbers = [55, 555]
-          let firstResult = FooBarQix.containingValue(for: numbers[0])
-          let secondResult = FooBarQix.containingValue(for: numbers[1])
+          let firstResult = FooBarQix.containingKeyword(for: numbers[0])
+          let secondResult = FooBarQix.containingKeyword(for: numbers[1])
           expect(firstResult).to(match("BarBar"))
           expect(secondResult).to(match("BarBarBar"))
         }
         
         it("must be return n*'Qix' when the numbers contain n*7") {
           let numbers = [77, 777]
-          let firstResult = FooBarQix.containingValue(for: numbers[0])
-          let secondResult = FooBarQix.containingValue(for: numbers[1])
+          let firstResult = FooBarQix.containingKeyword(for: numbers[0])
+          let secondResult = FooBarQix.containingKeyword(for: numbers[1])
           expect(firstResult).to(match("QixQix"))
           expect(secondResult).to(match("QixQixQix"))
         }
