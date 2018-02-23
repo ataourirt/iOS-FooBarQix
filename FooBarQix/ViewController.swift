@@ -9,24 +9,36 @@
 import UIKit
 
 struct Constants {
-  static let foo = "Foo"
-  static let bar = "Bar"
-  static let qix = "Qix"
+  static let foo : String = "Foo"
+  static let bar : String = "Bar"
+  static let qix : String = "Qix"
 }
 
-class HomeViewController: UIViewController {
+class FooBarQix {
   
-  static func divisibleValue(for value: Int) -> String {
-    var result = ""
+  static func generateResult(for number: Int) -> String {
     
+    let div = divisibleKeyword(for: number)
+    let contain = containingKeyword(for: number)
+    
+    if div.isEmpty && contain.isEmpty {
+      return "\(number)"
+    }
+    return div + contain
+  }
+  
+
+  static func divisibleKeyword(for value: Int) -> String {
+    var result = ""
+
     if value % 3 == 0 { result += Constants.foo }
     if value % 5 == 0 { result += Constants.bar }
     if value % 7 == 0 { result += Constants.qix }
-    
+
     return result
   }
   
-  static func containingValue(for value: Int) -> String {
+  static func containingKeyword(for value: Int) -> String {
     var result = ""
     
     let myArray = Array("\(value)")
@@ -39,11 +51,10 @@ class HomeViewController: UIViewController {
     
     return result
   }
+  
+}
+class HomeViewController: UIViewController {
 
 
-  static func finalFormat(for value: Int) -> String {
-    let result = divisibleValue(for: value) + containingValue(for: value)
-    return result
-  }
 }
 
