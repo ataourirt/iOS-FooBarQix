@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5F4D63DB2FA589DEAEAB5445 /* Pods_FooBarQix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318EEFD547AFC1A3A5452119 /* Pods_FooBarQix.framework */; };
 		966CB03C2042E92000C60AC8 /* FooBarQix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CB03B2042E92000C60AC8 /* FooBarQix.swift */; };
+		966CB03E20442A2D00C60AC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CB03D20442A2D00C60AC8 /* Constants.swift */; };
 		96F9C14E203EC15400D4CCD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9C14D203EC15400D4CCD5 /* AppDelegate.swift */; };
 		96F9C150203EC15400D4CCD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F9C14F203EC15400D4CCD5 /* ViewController.swift */; };
 		96F9C153203EC15400D4CCD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F9C151203EC15400D4CCD5 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		380F818E12091D2B914D0B03 /* Pods-FooBarQixTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooBarQixTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FooBarQixTests/Pods-FooBarQixTests.release.xcconfig"; sourceTree = "<group>"; };
 		87F0BBBE62939D197283A6A5 /* Pods-FooBarQixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FooBarQixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FooBarQixTests/Pods-FooBarQixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		966CB03B2042E92000C60AC8 /* FooBarQix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooBarQix.swift; sourceTree = "<group>"; };
+		966CB03D20442A2D00C60AC8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96F9C14A203EC15400D4CCD5 /* FooBarQix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FooBarQix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F9C14D203EC15400D4CCD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F9C14F203EC15400D4CCD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				96F9C14D203EC15400D4CCD5 /* AppDelegate.swift */,
 				966CB03B2042E92000C60AC8 /* FooBarQix.swift */,
 				96F9C14F203EC15400D4CCD5 /* ViewController.swift */,
+				966CB03D20442A2D00C60AC8 /* Constants.swift */,
 				96F9C151203EC15400D4CCD5 /* Main.storyboard */,
 				96F9C154203EC15400D4CCD5 /* Assets.xcassets */,
 				96F9C156203EC15400D4CCD5 /* LaunchScreen.storyboard */,
@@ -347,6 +350,7 @@
 				96F9C150203EC15400D4CCD5 /* ViewController.swift in Sources */,
 				96F9C14E203EC15400D4CCD5 /* AppDelegate.swift in Sources */,
 				966CB03C2042E92000C60AC8 /* FooBarQix.swift in Sources */,
+				966CB03E20442A2D00C60AC8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

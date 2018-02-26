@@ -8,12 +8,6 @@
 
 import Foundation
 
-struct Constants {
-  static let foo : String = "Foo"
-  static let bar : String = "Bar"
-  static let qix : String = "Qix"
-}
-
 class FooBarQix {
   
   static func printValue(for number: Int) -> String {
