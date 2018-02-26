@@ -12,7 +12,6 @@ import Nimble
 
 @testable import FooBarQix
 
-
 class FooBarQixSpec: QuickSpec {
   override func spec() {
     
@@ -26,9 +25,9 @@ class FooBarQixSpec: QuickSpec {
         expect(secondResult).to(beEmpty())
       }
       
-      context("must be return specials values when the numbers are divisible per 3, 5 or 7") {
+      context("should be return specials values when the numbers are divisible per 3, 5 or 7") {
         
-        it("must be return 'Foo' when the number is divisible per 3") {
+        it("should be return 'Foo' when the number is divisible per 3") {
           let numbers = [3, 6]
           let firstResult = FooBarQix.printDivisibleValue(for: numbers[0])
           let secondResult = FooBarQix.printDivisibleValue(for: numbers[1])
@@ -36,7 +35,7 @@ class FooBarQixSpec: QuickSpec {
           expect(secondResult).to(match("Foo"))
         }
         
-        it("must be return 'Bar' when the number is divisible per 5") {
+        it("should be return 'Bar' when the number is divisible per 5") {
           let numbers = [5, 10]
           let firstResult = FooBarQix.printDivisibleValue(for: numbers[0])
           let secondResult = FooBarQix.printDivisibleValue(for: numbers[1])
@@ -44,7 +43,7 @@ class FooBarQixSpec: QuickSpec {
           expect(secondResult).to(match("Bar"))
         }
         
-        it("must be return 'Qix' when the number is divisible per 7") {
+        it("should be return 'Qix' when the number is divisible per 7") {
           let numbers = [7, 14]
           let firstResult = FooBarQix.printDivisibleValue(for: numbers[0])
           let secondResult = FooBarQix.printDivisibleValue(for: numbers[1])
@@ -57,9 +56,9 @@ class FooBarQixSpec: QuickSpec {
     
     describe("intermediate treatment - numbers containing special values") {
       
-      context("must be return specials values when the numbers contain 3, 5 or 7") {
+      context("should be return specials values when the numbers contains 3, 5 or 7") {
         
-        it("must be return 'Foo' when the number contain 3") {
+        it("should be return 'Foo' when the number contains 3") {
           let numbers = [3, 13]
           let firstResult = FooBarQix.printContainValue(for: numbers[0])
           let secondResult = FooBarQix.printContainValue(for: numbers[1])
@@ -67,7 +66,7 @@ class FooBarQixSpec: QuickSpec {
           expect(secondResult).to(match("Foo"))
         }
         
-        it("must be return 'Bar' when the number contain 5") {
+        it("should be return 'Bar' when the number contains 5") {
           let numbers = [5, 15]
           let firstResult = FooBarQix.printContainValue(for: numbers[0])
           let secondResult = FooBarQix.printContainValue(for: numbers[1])
@@ -75,7 +74,7 @@ class FooBarQixSpec: QuickSpec {
           expect(secondResult).to(match("Bar"))
         }
         
-        it("must be return 'Qix' when the number contain 7") {
+        it("should be return 'Qix' when the number contains 7") {
           let numbers = [7, 17]
           let firstResult = FooBarQix.printContainValue(for: numbers[0])
           let secondResult = FooBarQix.printContainValue(for: numbers[1])
@@ -83,7 +82,7 @@ class FooBarQixSpec: QuickSpec {
           expect(secondResult).to(match("Qix"))
         }
         
-        it("must be return n*'Foo' when the numbers contain n*3") {
+        it("should be return n*'Foo' when the numbers contains n*3") {
           let numbers = [33, 333]
           let firstResult = FooBarQix.printContainValue(for: numbers[0])
           let secondResult = FooBarQix.printContainValue(for: numbers[1])
@@ -91,7 +90,7 @@ class FooBarQixSpec: QuickSpec {
           expect(secondResult).to(match("FooFooFoo"))
         }
         
-        it("must be return n*'Bar' when the numbers contain n*5") {
+        it("should be return n*'Bar' when the numbers contains n*5") {
           let numbers = [55, 555]
           let firstResult = FooBarQix.printContainValue(for: numbers[0])
           let secondResult = FooBarQix.printContainValue(for: numbers[1])
@@ -99,7 +98,7 @@ class FooBarQixSpec: QuickSpec {
           expect(secondResult).to(match("BarBarBar"))
         }
         
-        it("must be return n*'Qix' when the numbers contain n*7") {
+        it("should be return n*'Qix' when the numbers contains n*7") {
           let numbers = [77, 777]
           let firstResult = FooBarQix.printContainValue(for: numbers[0])
           let secondResult = FooBarQix.printContainValue(for: numbers[1])
@@ -111,49 +110,48 @@ class FooBarQixSpec: QuickSpec {
     }
     describe("final traitement") {
       
-      context("must be return the initial value when the numbers are not divisible and do not contain 3, 5 or 7") {
+      context("should be return the initial value when the numbers are not divisible and do not contains 3, 5 or 7") {
         
-        it("must be return initial value when the number isn't divisible per 3, 5 or 7") {
+        it("should be return initial value when the number isn't divisible per 3, 5 or 7") {
           let number = 1
           let result = FooBarQix.printValue(for: number)
           expect(result).to(match("1"))
         }
         
-        it("must be return initial value when the number do not contain 3, 5 or 7") {
+        it("should be return initial value when the number do not contains 3, 5 or 7") {
           let number = 8
           let result = FooBarQix.printValue(for: number)
           expect(result).to(match("8"))
         }
       }
       
-      context("must be return specials values when the numbers contain and are divisible per 3, 5 or 7") {
+      context("should be return specials values when the numbers contains and are divisible per 3, 5 or 7") {
         
-        it("must be return 'FooFoo' when the number contain and is divisible per 3") {
+        it("should be return 'FooFoo' when the number contains and is divisible per 3") {
           let number = 3
           let result = FooBarQix.printValue(for: number)
           expect(result).to(match("FooFoo"))
         }
         
-        it("must be return 'BarBar' when the number contain and is divisible per 5") {
+        it("should be return 'BarBar' when the number contains and is divisible per 5") {
           let number = 5
           let result = FooBarQix.printValue(for: number)
           expect(result).to(match("BarBar"))
         }
         
-        it("must be return 'QixQix' when the number contain and is divisible per 7") {
+        it("should be return 'QixQix' when the number contains and is divisible per 7") {
           let number = 7
           let result = FooBarQix.printValue(for: number)
           expect(result).to(match("QixQix"))
         }
         
-        ////
-        it("the number is divisible per many special digits and contain the digit 3") {
+        it("should be return 'FooFooFoo' when the number is 33 because it contains 3 two times and is divisible by 3") {
           let number = 33
           let result = FooBarQix.printValue(for: number)
           expect(result).to(match("FooFooFoo"))
         }
         
-        it("the number is divisible per many special digits and contain the digit 5") {
+        it("should be return 'FooBarBar' when the number is 15 because it contains 5 and is divisible by 3 and 5") {
           let number = 15
           let result = FooBarQix.printValue(for: number)
           expect(result).to(match("FooBarBar"))

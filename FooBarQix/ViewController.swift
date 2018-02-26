@@ -14,15 +14,18 @@ class HomeViewController: UIViewController {
   @IBOutlet weak var startButton: UIButton!
   @IBOutlet weak var promptLabel: UILabel!
   @IBOutlet weak var resultLabel: UILabel!
-  
-  override var prefersStatusBarHidden: Bool {
-    return true
-  }
+  @IBOutlet weak var closeRulesButton: UIButton!
+  @IBOutlet weak var rulesVisualEffectView: UIVisualEffectView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     configureUI()
   }
+  
+  @IBAction func closeRules(_ sender: Any) {
+    self.rulesVisualEffectView.removeFromSuperview()
+  }
+  
   @IBAction func launchValueDisplay(_ sender: Any) {
     promptLabel.text = ""
     resultLabel.text = ""
@@ -33,20 +36,25 @@ class HomeViewController: UIViewController {
       resultLabel.text? += "\(i) => " + FooBarQix.printValue(for: i) + "\n"
     }
   }
-  
 }
 
 extension HomeViewController {
+  
+  override var prefersStatusBarHidden: Bool {
+    return true
+  }
+  
   func configureUI() {
     self.termView.layer.masksToBounds = true
-    //    termView.layer.shadowOffset = CGSize(width: 3, height: 3)
+    
     addRoundedBorders(to: self.termView.layer, radius: 5.0, width: 0.2, color: UIColor.init(red: 225, green: 225, blue: 255, alpha: 1))
-    addRoundedBorders(to: startButton.layer, radius: 10, width: 0.3, color: .gray)
+    addRoundedBorders(to: startButton.layer, radius: 7.5, width: 0, color: .gray)
+    addRoundedBorders(to: closeRulesButton.layer, radius: 7.5, width: 0, color: .blue)
     
     let redColor    = UIColor.init(red: 255.0/255.0, green: 96.0/255.0, blue: 88.0/255.0, alpha: 1).cgColor
     let orangeColor = UIColor.init(red: 255.0/255.0, green: 189.0/255.0, blue: 46.0/255.0, alpha: 1).cgColor
     let greenColor  = UIColor.init(red: 40.0/255.0, green: 202.0/255.0, blue: 65.0/255.0, alpha: 1).cgColor
-
+    
     let redLayer    = circleLayer(for: CGPoint(x: 10,y: 10), radius: CGFloat(5), color: redColor)
     let orangeLayer = circleLayer(for: CGPoint(x: 25,y: 10), radius: CGFloat(5), color: orangeColor)
     let greenLayer  = circleLayer(for: CGPoint(x: 40,y: 10), radius: CGFloat(5), color: greenColor)
@@ -55,15 +63,15 @@ extension HomeViewController {
     termView.layer.addSublayer(orangeLayer)
     termView.layer.addSublayer(greenLayer)
   }
-  
+}
+
+extension HomeViewController {
   func circleLayer(for arcCenter: CGPoint, radius: CGFloat, color: CGColor) -> CALayer {
     let circlePath = UIBezierPath(arcCenter: arcCenter, radius: radius, startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
     let layer      = CAShapeLayer()
-    
     layer.path        = circlePath.cgPath
     layer.fillColor   = color
     layer.strokeColor = color
-    
     return layer
   }
   
@@ -73,3 +81,5 @@ extension HomeViewController {
     layer.borderWidth  = width
   }
 }
+
+

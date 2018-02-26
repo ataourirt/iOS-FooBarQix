@@ -12,13 +12,13 @@ class FooBarQix {
   
   static func printValue(for number: Int) -> String {
     
-    let div = printDivisibleValue(for: number)
-    let contain = printContainValue(for: number)
+    let divisibleValue = printDivisibleValue(for: number)
+    let containValue = printContainValue(for: number)
     
-    if div.isEmpty && contain.isEmpty {
+    if divisibleValue.isEmpty && containValue.isEmpty {
       return "\(number)"
     }
-    return div + contain
+    return divisibleValue + containValue
   }
   
   static func printDivisibleValue(for value: Int) -> String {
