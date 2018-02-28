@@ -31,7 +31,6 @@ class HomeViewController: UIViewController {
     resultLabel.text = ""
     
     for i in 1...100 {
-      print("\(i) = > " + FooBarQix.printValue(for: i))
       promptLabel.text? += "$> \n"
       resultLabel.text? += "\(i) => " + FooBarQix.printValue(for: i) + "\n"
     }
